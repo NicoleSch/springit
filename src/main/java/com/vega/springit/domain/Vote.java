@@ -17,7 +17,6 @@ public class Vote extends Auditable {
     @Id
     @GeneratedValue
     private Long id;
-    @NonNull
     private int vote;
 
     // user
