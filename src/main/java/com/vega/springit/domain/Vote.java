@@ -1,9 +1,6 @@
 package com.vega.springit.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 @NoArgsConstructor
-@Data
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Vote extends Auditable {
 
     @Id
