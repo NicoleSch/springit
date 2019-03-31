@@ -1,14 +1,15 @@
 package com.vega.springit.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
-@Data
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Comment extends Auditable {
 
     @Id
@@ -18,5 +19,11 @@ public class Comment extends Auditable {
     private String body;
 
     @ManyToOne
+    @NonNull
     private Link link;
+
+    public Comment(@NonNull String body, @NonNull Link link) {
+        this.body = body;
+        this.link = link;
+    }
 }
