@@ -5,14 +5,12 @@ import com.vega.springit.domain.Role;
 import com.vega.springit.domain.User;
 import com.vega.springit.repository.CommentRepository;
 import com.vega.springit.repository.LinkRepository;
-
+import com.vega.springit.repository.RoleRepository;
+import com.vega.springit.repository.UserRepository;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-
-import com.vega.springit.repository.RoleRepository;
-import com.vega.springit.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -37,7 +35,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
     // add users and roles
     addUsersAndRoles();
-    
+
     Map<String, String> links = new HashMap<>();
     links.put("Securing Spring Boot APIs and SPAs with OAuth 2.0",
         "https://auth0.com/blog/securing-spring-boot-apis-and-spas-with-oauth2/?utm_source=reddit&utm_medium=sc&utm_campaign=springboot_spa_securing");
