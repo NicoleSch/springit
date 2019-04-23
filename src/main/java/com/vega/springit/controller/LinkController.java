@@ -56,8 +56,8 @@ public class LinkController {
       model.addAttribute("link", link);
       return "link/submit";
     } else {
-      logger.info("Link saved.");
       linkRepository.save(link);
+      logger.info("Link saved.");
       redirectAttributes
           .addAttribute("id", link.getId())
           .addFlashAttribute("success", true);
