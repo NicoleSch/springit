@@ -12,6 +12,7 @@
   <artifactId>springit</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>springit</name>
+  <packaging>jar</packaging>
   <description>Reddit Clone</description>
 
   <properties>
