@@ -29,7 +29,7 @@
           ago
         </time>
         by
-        <a href="../auth/profile.html" class="author" th:text="${link.createdBy}">therealdanvega</a>
+        <a th:href="@{'/u/' + ${link.getUser().getAlias()}}" class="author" th:text="${link.getUser().getAlias()}">therealdanvega</a>
       </p>
       <p>
         <a th:href="@{'/link/' + ${link.id} + '#comments'}" class="comments" th:text="|${link.getComments().size()} comments|"><i class="fas fa-comments"></i> 8
